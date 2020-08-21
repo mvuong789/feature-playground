@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './features/app/App';
+
 ReactDOM.render(
-  <h1>Hello World</h1>,
+  <App />,
   document.getElementById('app'),
 );
