@@ -30,9 +30,6 @@ module.exports = {
     ],
   },
   devtool: 'inline-source-map',
-  devServer: {
-    open: 'firefox'
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
