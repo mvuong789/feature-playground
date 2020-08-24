@@ -10,6 +10,11 @@ const App = () => {
 
       <h2>Here is an example todo</h2>
       <Todos todos={[{ id: 'a1s2d3-afq3qh-b3n849', text: 'Clean room', dateAdded: new Date(), done: false }]} />
+
+      <ul>
+        <li>a</li>
+        <li>b</li>
+      </ul>
     </div>
   )
 }
