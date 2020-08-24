@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ITodo } from './Todos.config';
+import Todo from '../../components/todo/Todo';
 
 type TodosProps = {
   todos: ITodo[]
@@ -8,20 +9,19 @@ type TodosProps = {
 
 const Todos = ({ todos }: TodosProps) => {
   const displayTodos = todos.map((todo) => {
-    const { id, text, dateAdded, done } = todo;
+    const { id } = todo;
     return (
-      <li key={`todo-${id}`}>
-        <div>{text}</div>
-        <div>{dateAdded.toISOString()}</div>
-        <div>{done.toString()}</div>
-      </li>
-    )
+      <Todo
+        key={`todo-${id}`}
+        todo={todo}
+      />
+    );
   });
 
   return (
-    <ul>
+    <div>
       {displayTodos}
-    </ul>
+    </div>
   )
 };
 
