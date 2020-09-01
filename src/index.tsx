@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import '../node_modules/normalize.css/normalize.css';
 import 'normalize.css';
-import './styles/global.styl'
+import './styles/global.sass'
 
 import App from './features/app/App';
 

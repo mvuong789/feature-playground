@@ -21,11 +21,18 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.styl(us)?$/,
+        test: /\.s(a|c)ss?$/,
         use: [
           'style-loader',
-          'css-loader',
-          'stylus-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[path]__[local]--[hash:base64:5]'
+              }
+            }
+          },
+          'sass-loader'
         ],
       },
       {

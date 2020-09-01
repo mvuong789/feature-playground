@@ -11,7 +11,8 @@
     "noImplicitAny": true,
     "allowJs": true,
     "module": "esnext",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "typeRoots": ["src/typings"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/*.spec.ts"]
