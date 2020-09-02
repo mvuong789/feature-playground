@@ -13,12 +13,12 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.s(a|c)ss?$/,
@@ -28,11 +28,11 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[path]__[local]--[hash:base64:5]'
-              }
-            }
+                localIdentName: '[path]__[local]--[hash:base64:5]',
+              },
+            },
           },
-          'sass-loader'
+          'sass-loader',
         ],
       },
       {
@@ -41,8 +41,17 @@ module.exports = {
           'style-loader',
           'css-loader',
         ]
-      }
-    ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
     extensions: [
